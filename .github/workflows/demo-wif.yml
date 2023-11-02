@@ -2,7 +2,7 @@ name: Connect to GCP and List Instances
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
