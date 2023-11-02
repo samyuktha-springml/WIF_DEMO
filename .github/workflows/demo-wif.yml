@@ -29,7 +29,7 @@ jobs:
         workload_identity_provider:  ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-    # List the instances in the project
+    # List the instances in the prj
     - name: List Instances
       run: |-
         gcloud compute instances list --project $PROJECT_ID
