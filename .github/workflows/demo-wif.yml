@@ -32,4 +32,4 @@ jobs:
     # List the instances in the project
     - name: Adding a message to pubsub topic
       run: |-
-        gcloud pubsub topics publish topic1 --message=message.json
+        gcloud pubsub topics publish topic1 --message="$(cat message.json)"
