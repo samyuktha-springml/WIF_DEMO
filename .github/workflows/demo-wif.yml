@@ -38,4 +38,5 @@ jobs:
     #     echo "Executing command: gcloud pubsub topics publish topic1 --message=\"$MESSAGE_CONTENT\""
     #     gcloud pubsub topics publish topic1 --message="$MESSAGE_CONTENT"
     - name: Run Python Script
-        run: python data/pubsub.py
+        run: |-
+          python data/pubsub.py
