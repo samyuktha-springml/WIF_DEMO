@@ -5,9 +5,10 @@ from google.cloud import pubsub_v1
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
 
 # Replace these with your Google Cloud Project and Pub/Sub topic details
-project_id = "arched-campus-400411"
-topic_id = "topic1"
-
+# project_id = "arched-campus-400411"
+# topic_id = "topic1"
+project_id = os.getenv("PROJECT_ID")
+topic_id=os.getenv("TOPIC_ID")
 # Create a Pub/Sub client
 publisher = pubsub_v1.PublisherClient()
 

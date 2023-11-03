@@ -6,6 +6,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  TOPIC_ID: ${{ secrets.PUBSUB_TOPIC_ID }}
 
 jobs:
   setup-prepare-list:
