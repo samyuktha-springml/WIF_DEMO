@@ -10,7 +10,7 @@ project_id = os.getenv("PROJECT_ID")
 topic_id = os.getenv("TOPIC_ID")
 
 # Read the JSON message data from a file
-with open("message.json", "r") as file:
+with open("data/message.json", "r") as file:
     message_data = json.load(file)
 
 # Create a Pub/Sub client
