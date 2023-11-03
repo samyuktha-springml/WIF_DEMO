@@ -29,11 +29,13 @@ jobs:
         workload_identity_provider:  ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-    # List the instances in the project
-    - name: Adding a message to pubsub topic
-      run: |-
-        ls -l
-        MESSAGE_CONTENT=$(cat message.json)
-        echo "Message content: $MESSAGE_CONTENT"
-        echo "Executing command: gcloud pubsub topics publish topic1 --message=\"$MESSAGE_CONTENT\""
-        gcloud pubsub topics publish topic1 --message="$MESSAGE_CONTENT"
+    # # List the instances in the project
+    # - name: Adding a message to pubsub topic
+    #   run: |-
+    #     ls -l
+    #     MESSAGE_CONTENT=$(cat message.json)
+    #     echo "Message content: $MESSAGE_CONTENT"
+    #     echo "Executing command: gcloud pubsub topics publish topic1 --message=\"$MESSAGE_CONTENT\""
+    #     gcloud pubsub topics publish topic1 --message="$MESSAGE_CONTENT"
+    - name: Run Python Script
+        run: python data/pubsub.py
